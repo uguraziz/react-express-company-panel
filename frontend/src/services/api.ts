@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-    baseURL: import.meta.env.DEV 
+    baseURL: window.location.hostname === 'localhost' 
         ? 'http://localhost:5001/api' 
         : 'https://company-panel-api.altuntech.com/api',
 })
