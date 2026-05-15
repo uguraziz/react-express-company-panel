@@ -1,7 +1,9 @@
 import axios from 'axios'
 
 const api = axios.create({
-    baseURL: 'http://localhost:5001/api',
+    baseURL: import.meta.env.DEV 
+        ? 'http://localhost:5001/api' 
+        : 'https://company-panel-api.altuntech.com/api',
 })
 
 api.interceptors.request.use((config) => {
