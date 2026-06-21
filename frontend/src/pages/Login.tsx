@@ -38,6 +38,10 @@ function Login() {
                     layout="vertical"
                     onFinish={onFinish}
                     autoComplete="off"
+                    initialValues={{
+                        username: 'admin',
+                        password: '123456'
+                    }}
                 >
                     <Form.Item
                         label="Kullanıcı Adı"
